@@ -1,0 +1,24 @@
+body{background:#fff}
+/* Comparison switch */
+.share-toggle{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:90;display:flex;align-items:center;gap:4px;padding:6px;background:#fff;color:var(--ink);box-shadow:0 8px 30px #14213d40;font-size:13px;font-weight:700}
+.share-label{padding:0 10px 0 8px}
+.share-toggle button{min-width:64px;min-height:40px;padding:0 14px;border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;cursor:pointer}
+.share-toggle button[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.share-toggle button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media(max-width:1000px){.share-toggle{bottom:calc(70px + env(safe-area-inset-bottom,0px))}}
+
+/* 差し色なし: every accent use goes back to navy on light grounds and pale blue / white on dark grounds */
+.no-accent{--accent:var(--navy)}
+.no-accent .hb-em{color:inherit}
+.no-accent .hb-btn .hb-chip,.no-accent dialog .hb-btn .hb-chip{background:#fff;color:var(--navy)}
+.no-accent .hb-btn-light .hb-chip,.no-accent .hb-hero-card .hb-chip,.no-accent .hb-biz-list .hb-chip,.no-accent .hb-news .hb-chip{background:var(--navy);color:#fff}
+.no-accent .hb-title-light .hb-title-ja::before{background:#fff}
+.no-accent .hb-sub-title::before{background:currentColor}
+.no-accent .hb-side-title,.no-accent .hb-strengths .hb-figures h3,.no-accent .hb-relief-list time,.no-accent .hb-strengths .hb-sub-title{color:var(--blue-soft)}
+.no-accent .hb-strengths .hb-figure strong{color:#fff}
+.no-accent .hb-equip li::before{background:var(--blue)}
+.no-accent .hb-maplink[aria-pressed=true]::before{color:var(--blue)}
+.no-accent .hb-headcta:hover,.no-accent .hb-btn:hover{background:var(--blue)}
+.no-accent .hb-btn-light:hover{background:#fff}
+.no-accent .hb-btn:hover .hb-chip{background:#fff;color:var(--navy)}
+.no-accent .hb-btn-light:hover .hb-chip{background:var(--navy);color:#fff}

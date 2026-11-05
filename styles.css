@@ -142,14 +142,14 @@ dialog{padding:32px 22px}}
 
 
 /* Supplied photographs: keep each existing frame and crop within it. */
-.hb-photo>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.hb-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 .hb-hero-media>img{object-position:50% 46%}
 .hb-hero-media::after{background:linear-gradient(180deg,#0c142455 0%,#0c142410 32%,#0c1424e6 100%)}
 .hb-ph-main>img{object-position:50% 58%}
-.hb-relief-head .hb-photo>img{object-fit:contain}
+.hb-relief-head .hb-photo img{object-fit:contain}
 .hb-panorama>img{object-position:50% 55%}
 @media(max-width:800px){.hb-hero-media>img{object-position:60% 50%}}
 
-/* Show the whole quarry photo with restrained enlargement. */
+/* Full-width restored quarry photograph with a wider composition. */
 .hb-strengths-bg .hb-placeholder{inset:0;background:var(--navy)}
-.hb-strengths-bg .hb-photo>img{max-width:800px;margin-inline:auto;object-fit:contain}
+.hb-strengths-bg .hb-photo img{max-width:none;margin:0;object-fit:cover;object-position:50% 54%}

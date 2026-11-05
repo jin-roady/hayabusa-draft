@@ -1,0 +1,116 @@
+[
+  {
+    "source": "images/mail_083335_JST/D0726F63-.jpg",
+    "output": "images/enhanced/quarry-wide.jpg",
+    "width": 1672,
+    "height": 941,
+    "ai_processed": true,
+    "ai_outpainted": true
+  },
+  {
+    "source": "images/mail_083027_JST/8575B940-.jpg",
+    "output": "images/enhanced/8575B940.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083027_JST/C8130447-.jpg",
+    "output": "images/enhanced/C8130447.jpg",
+    "width": 1448,
+    "height": 1086,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083027_JST/F501E256-.jpg",
+    "output": "images/enhanced/F501E256.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083027_JST/IMG_0410.jpg",
+    "output": "images/enhanced/IMG_0410.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083027_JST/IMG_0411.jpg",
+    "output": "images/enhanced/IMG_0411.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083027_JST/IMG_9839.jpg",
+    "output": "images/enhanced/IMG_9839.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083117_JST/522DA483-.jpg",
+    "output": "images/enhanced/522DA483.jpg",
+    "width": 1448,
+    "height": 1086,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083117_JST/CA352D6F-.jpg",
+    "output": "images/enhanced/CA352D6F.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083117_JST/D3CCD402-.jpg",
+    "output": "images/enhanced/D3CCD402.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083151_JST/9B75D0AB-.jpg",
+    "output": "images/enhanced/9B75D0AB.jpg",
+    "width": 1448,
+    "height": 1086,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_084105_JST/DFBA4855-.jpg",
+    "output": "images/enhanced/DFBA4855.jpg",
+    "width": 1448,
+    "height": 1086,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_084105_JST/IMG_9866.jpg",
+    "output": "images/enhanced/IMG_9866.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_084105_JST/IMG_9868.jpg",
+    "output": "images/enhanced/IMG_9868.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/追加_mail_0907_JST/509486A8-.jpg",
+    "output": "images/enhanced/509486A8.jpg",
+    "width": 1086,
+    "height": 1448,
+    "ai_processed": true
+  },
+  {
+    "source": "images/mail_083335_JST/D0726F63-.jpg",
+    "output": "images/enhanced/quarry-mobile.jpg",
+    "width": 941,
+    "height": 1672,
+    "ai_processed": true,
+    "ai_outpainted": true
+  }
+]

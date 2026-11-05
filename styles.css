@@ -139,3 +139,13 @@ dialog{padding:32px 22px}}
 @media(max-width:600px){.hb-biz-list{grid-template-columns:1fr;gap:32px}.hb-biz-list .hb-thumb,.hb-biz-list li:first-child .hb-thumb{aspect-ratio:16/10}}
 @media(max-width:360px){.hb-title-en{font-size:36px}.hb-spbar a b{font-size:15px}.hb-spbar a,.hb-spbar button{gap:5px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){.hb-strengths{--p:1}*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+
+/* Supplied photographs: keep each existing frame and crop within it. */
+.hb-photo>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.hb-hero-media>img{object-position:50% 46%}
+.hb-hero-media::after{background:linear-gradient(180deg,#0c142455 0%,#0c142410 32%,#0c1424e6 100%)}
+.hb-ph-main>img{object-position:50% 58%}
+.hb-relief-head .hb-photo>img{object-fit:contain}
+.hb-panorama>img{object-position:50% 55%}
+@media(max-width:800px){.hb-hero-media>img{object-position:60% 50%}}

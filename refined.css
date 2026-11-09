@@ -1,0 +1,102 @@
+/* H proposal: restrained editorial detailing and progressive motion. */
+:root{--motion-ease:cubic-bezier(.22,.68,.3,1);--line:#e0e5ed;--soft:#f4f6f9}
+html{scroll-padding-top:0}
+section[id]{scroll-margin-top:calc(var(--header) + 20px)}
+.hb-title-en{background:none;color:#b3bfce;font-weight:500;letter-spacing:-.045em}
+.hb-title-light .hb-title-en{background:none;color:#c8d4e4}
+.hb-title-ja,.sp-kicker{letter-spacing:.1em}
+.hb-about-copy,.hb-vision-copy,.hb-lead,.sp-hero h2,.sp-section-head h2{letter-spacing:.015em;text-wrap:pretty}
+.hb-about-text>p,.hb-vision-text>p,.sp-service-text>p{line-height:2.1}
+.hb-section{padding-top:clamp(88px,9vw,144px);padding-bottom:clamp(88px,9vw,144px)}
+.hb-top.is-solid{background:rgb(255 255 255 / .96);box-shadow:0 1px 0 rgb(20 33 61 / .08)}
+@supports(backdrop-filter:blur(12px)){.hb-top.is-solid{backdrop-filter:blur(12px)}}
+.hb-nav a{position:relative;opacity:1;transition:color .22s}
+.hb-nav a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .3s var(--motion-ease)}
+.hb-nav a:hover::after,.hb-nav a:focus-visible::after,.hb-nav a[aria-current=page]::after{transform:scaleX(1);transform-origin:left}
+.hb-nav a:hover{opacity:1}
+.hb-btn{min-height:56px;padding:17px 22px;gap:32px;font-size:13px;transition:background .24s,color .24s,box-shadow .24s}
+.hb-btn .hb-chip{width:30px;height:22px;transition:transform .3s var(--motion-ease),background .24s,color .24s}
+.hb-btn:hover,.hb-btn:focus-visible{box-shadow:0 8px 24px rgb(20 33 61 / .1)}
+.hb-btn:hover .hb-chip,.hb-btn:focus-visible .hb-chip{transform:translateX(4px)}
+.hb-headcta{transition:background .24s}
+.hb-hero-copy h1{letter-spacing:.025em;line-height:1.4}
+.hb-hero-copy .hb-hero-eyebrow{display:flex;align-items:center;gap:14px;margin:0 0 28px;color:#fff;font-size:11px;font-weight:600;letter-spacing:.13em}
+.hb-hero-eyebrow::before{content:"";width:32px;height:1px;background:var(--accent)}
+.hb-scrollcue{position:absolute;left:calc(var(--side) + var(--gutter));bottom:20px;z-index:3;display:flex;align-items:center;gap:18px;min-height:32px;color:#fff;font:600 10px/1 "Avenir Next",Arial,sans-serif;letter-spacing:.18em;text-decoration:none}
+.hb-scrollcue i{display:block;position:relative;width:64px;height:1px;background:#ffffff55;overflow:hidden}
+.hb-scrollcue i::after{content:"";position:absolute;inset:0;background:#fff;transform:translateX(-105%)}
+@media(prefers-reduced-motion:no-preference){.hb-scrollcue i::after{animation:hb-scroll-line 2.6s var(--motion-ease) 3}}
+@keyframes hb-scroll-line{0%,10%{transform:translateX(-105%)}65%,100%{transform:translateX(105%)}}
+.hb-hero-card{padding:14px 18px 14px 14px;transition:background .25s,box-shadow .25s}
+.hb-hero-card:hover{box-shadow:0 12px 35px rgb(0 0 0 / .2)}
+.hb-about-photos .hb-ph-sub{outline:12px solid #fff;box-shadow:0 18px 44px rgb(20 33 61 / .08)}
+.hb-biz-list a{transition:background .3s}
+.hb-biz-body{transition:transform .35s var(--motion-ease)}
+.hb-thumb img{transition:transform .65s var(--motion-ease)}
+.hb-biz-list a:hover,.hb-biz-list a:focus-visible{background:#f5f7fa}
+.hb-biz-list a:hover .hb-biz-body{transform:translateX(4px)}
+.hb-equip-grid{gap:32px}
+.hb-equip{border:0;border-top:1px solid var(--line);padding:22px 0 28px;background:transparent;min-width:0}
+.hb-equip-label{font-size:12px;letter-spacing:.06em;margin-bottom:18px}
+.hb-equip .hb-count{margin-top:22px;padding-bottom:18px}
+.hb-count strong{font-family:"Avenir Next",Arial,sans-serif;font-size:66px;letter-spacing:-.05em;font-weight:600}
+.hb-equip li{line-height:2.15}.hb-equip li::before{width:4px;height:4px;top:1em}
+.hb-count span{font-size:13px}
+.hb-figure strong{font-weight:600;letter-spacing:-.04em}
+.hb-strengths-bg .hb-placeholder{filter:blur(calc(var(--p) * 6px))}
+.hb-companytable th,.hb-companytable td{padding-top:19px;padding-bottom:19px}
+.hb-fleet-table tbody tr{transition:background .2s}.hb-fleet-table tbody tr:hover{background:#edf2f8}
+.hb-fleet-details summary{padding-top:25px;padding-bottom:25px;transition:color .2s}
+.hb-fleet-details summary:hover{color:var(--blue)}
+.hb-footer{border-top:1px solid var(--line)}
+.hb-footnav a{transition:color .2s}.hb-footnav a:hover{color:var(--blue)}
+/* Subpages share the same cadence, finer rules, and photo treatment. */
+.hb-subpage .sp-breadcrumb{padding-top:24px;padding-bottom:24px;letter-spacing:.04em}
+.hb-subpage .sp-hero{background:#f3f5f8}
+.hb-subpage .sp-hero-copy{padding-top:72px;padding-bottom:78px}
+.hb-subpage .sp-hero h1{font-size:13px;letter-spacing:.1em;margin-top:14px;margin-bottom:34px}
+.hb-subpage .sp-hero h2{font-weight:700;line-height:1.5}
+.hb-subpage .sp-hero .sp-kicker{display:flex;gap:12px;align-items:center}
+.hb-subpage .sp-hero .sp-kicker::before{content:"";height:1px;width:24px;background:currentColor}
+.sp-hero-word{color:#e5eaf1;font-weight:600;letter-spacing:-.05em}
+.sp-wrap{padding-top:clamp(76px,7.5vw,112px);padding-bottom:clamp(76px,7.5vw,112px)}
+.sp-section-head{position:relative;padding-left:24px}
+.sp-section-head::before{content:"";position:absolute;left:0;top:4px;bottom:5px;width:2px;background:var(--accent)}
+.sp-section-head h2{font-weight:700;margin-top:14px}
+.sp-service{gap:8%}.sp-service-text>h2{letter-spacing:.04em}
+.sp-jump a{transition:color .25s}.sp-jump a>span{display:inline-block;align-self:flex-start;transition:transform .3s var(--motion-ease)}
+.sp-jump a:hover>span{transform:translate(4px,4px)}
+.sp-jump a:hover{color:#c4d6f0}
+.sp-history li{position:relative;padding-left:22px}
+.sp-history li::before{content:"";position:absolute;left:0;top:42px;width:4px;height:4px;background:var(--accent)}
+.sp-history time{font-family:"Avenir Next",Arial,sans-serif;letter-spacing:-.025em}
+.sp-gallery-item>span:last-child{padding-bottom:16px;border-bottom:1px solid var(--line)}
+.sp-gallery-item b{display:inline-block;font-weight:400;transition:transform .3s var(--motion-ease)}
+.sp-gallery-item:hover b{transform:rotate(90deg)}
+.sp-filters button{position:relative;transition:color .2s,background .2s,border-color .2s}
+.sp-filters button:not([aria-pressed=true]):hover{border-color:var(--navy)}
+.sp-phone{border-top:3px solid var(--accent)}
+.sp-form-notice{border-left-width:2px;background:#f4f6f9}
+.sp-field input,.sp-field select,.sp-field textarea{border-color:#d3dae4;background:#fafbfd;transition:border-color .2s,background .2s}
+.sp-field:focus-within label{color:var(--blue)}
+.sp-field :is(input,select,textarea):focus{background:#fff}
+.sp-cta{position:relative;overflow:hidden}
+.sp-cta::before{content:"";display:block;position:absolute;left:var(--wrap);right:var(--wrap);top:0;height:1px;background:#ffffff30}
+/* Reveal states exist only after the motion controller is available. */
+.motion-ready [data-reveal=pending]{opacity:0;transform:translate3d(0,20px,0)}
+.motion-ready [data-reveal=pending]:focus-within{opacity:1;transform:none}
+.site-progress{position:fixed;left:0;right:0;top:0;height:2px;z-index:100;background:var(--accent);transform:scaleX(0);transform-origin:left;pointer-events:none}
+.site-top{position:fixed;right:24px;bottom:24px;z-index:59;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;width:50px;height:58px;border:1px solid var(--line);background:#fff;color:var(--ink);box-shadow:0 4px 18px #14213d0a;transition:color .22s,background .22s}
+.site-top span{font-size:22px;line-height:1}.site-top small{font:600 9px/1 "Avenir Next",Arial,sans-serif;letter-spacing:.12em}
+.site-top:hover{background:var(--navy);color:#fff}.site-top[hidden]{display:none}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.hb-biz-list a:hover .hb-thumb img{transform:scale(1.04)}}
+@media(max-width:1000px){.hb-scrollcue{left:var(--gutter)}.hb-nav.open a::after{display:none}.site-top{bottom:80px;right:16px;width:44px;height:50px}}
+@media(max-width:800px){.hb-section{padding-top:76px;padding-bottom:76px}.hb-btn{min-height:52px;padding:15px 18px;gap:24px}.hb-scrollcue{display:none}.hb-hero-copy .hb-hero-eyebrow{margin-bottom:22px;font-size:10px;gap:10px}.hb-hero-eyebrow::before{width:24px}.hb-equip-grid{gap:28px}.hb-count strong{font-size:58px}.hb-about-photos .hb-ph-sub{outline-width:8px}.hb-subpage .sp-breadcrumb{padding-top:20px;padding-bottom:20px}.hb-subpage .sp-hero-copy{padding-top:44px;padding-bottom:48px}.hb-subpage .sp-hero h1{font-size:12px;margin-bottom:26px}.sp-wrap{padding-top:68px;padding-bottom:68px}.sp-section-head{padding-left:18px}.sp-section-head h2{font-size:25px}.sp-history li{padding-left:16px}.sp-history li::before{top:35px}.sp-hero-word{font-size:90px}.sp-service{gap:34px}.hb-companytable th,.hb-companytable td{padding-top:16px;padding-bottom:16px}}
+@media(max-width:380px){.hb-count span{font-size:12px}.hb-btn{gap:20px}.site-top{right:12px}}
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:hb-route-out .12s ease both}
+::view-transition-new(root){animation:hb-route-in .18s ease both}
+@keyframes hb-route-out{to{opacity:0}}
+@keyframes hb-route-in{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-ready [data-reveal]{opacity:1!important;transform:none!important}.hb-scrollcue i::after{animation:none}.hb-biz-list a:hover .hb-biz-body,.hb-biz-list a:hover .hb-thumb img,.sp-gallery-item:hover img,.sp-gallery-item:hover b,.sp-jump a:hover>span,.hb-btn:hover .hb-chip{transform:none}.site-top,.hb-nav a,.hb-nav a::after{transition:none}::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+@media print{.site-progress,.site-top,.hb-scrollcue{display:none!important}.motion-ready [data-reveal]{opacity:1!important;transform:none!important}}
